@@ -155,11 +155,9 @@ function create(tag) {
     }
 
     // Assign properties dynamically
-    properties.forEach(property => {
-        returningObj[property] = value => {
-            elm.setAttribute(property, value);
-            return returningObj;
-        };
+    properties.forEach(property => returningObj[property] = value => {
+        elm[property] = value;
+        return returningObj;
     });
 
     // List of event names
