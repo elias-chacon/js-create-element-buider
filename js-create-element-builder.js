@@ -116,7 +116,7 @@
  *   touchcancel: (handler: (event: TouchEvent) => void) => returningObj
  * }: returningObj}
  */
-export function create(tag) {
+function create(tag) {
     if (!tag) return;
     const elm = document.createElement(tag);
     const returningObj = {
